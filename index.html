@@ -1,0 +1,39 @@
+<html><head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta property="og:title" content="Mopicce3D">   <!-- 링크 시 미리보기 제목 -->
+        <meta property="og:description" content="WebGL">    <!-- 링크 시 미리보기 내용 -->
+        <meta property="og:image" content="thum_bodyfriend_massagechair_ironman.png"> <!-- 링크 시 미리보기 이미지 -->
+		<title>Mopicc3D WebGL</title>
+		<style>
+			body { margin: 0; overflow: hidden; -webkit-overflow-scrolling: touch; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+
+		<script>
+            var main_source="bodyfriend_massagechair_ironman" // 파일명
+            var main_bg=""; // 배경 파일명, 안 쓰면 ""로 비워둘 것
+            var main_camera_x = -0.2; // 카메라 좌우 거리, 첫 화면 스케일과 관련
+            var main_camera_y = 0.1; // 카메라 위아래 거리, 첫 화면 스케일과 관련
+            var main_camera_z = 0.2; // 카메라 앞뒤 거리, 첫 화면 스케일과 관련
+            var main_source_y = -0.04; // 물체 실제 배치 높낮이
+            var main_source_scale = 0.08; // 물체 실제 배치 크기
+            var main_source_bg = 0x999999; // 배경색
+            var main_source_rotate_speed_auto = 0.4; // 시작시 자동회전 속도
+            var main_source_rotate_speed_mouse = 0.6; // 마우스 조작시 회전 감도
+            var main_source_zoom_min = 0.15; // 
+            var main_source_zoom_max = 1; // 최대 줌인 줌아웃 수치
+            var main_source_pan_speed = 0.3;    // 마우스 조작시 이동 속도
+            var main_source_fov = 30; // 카메라 심도
+            
+            var touched = 1; // 터치 시 회전 중지여부 (0 : 아예 회전 안됨, 1 : 터치 후 회전 안됨, 2 : 터치 후에도 회전됨)
+            var OnGrid = 0; // 격자 표시여부
+        </script>
+        <script src="/JS/three.js"></script>
+        <script src="/JS/OBJLoader.js"></script>
+        <script src="/JS/OrbitControls.js"></script>
+        <script src="/JS/main_source.js"></script>
+	
+</body></html>
