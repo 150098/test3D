@@ -5,7 +5,7 @@ document.body.appendChild( renderer.domElement );
 
 // instantiate a loader
 var loader = new THREE.OBJLoader();
-var texture = new THREE.TextureLoader().load( main_source + ".jpg" );
+var texture = new THREE.TextureLoader().load( main_source + ".png" );
 var main_source_mat = new THREE.MeshBasicMaterial( {map : texture} );
 var obj = new THREE.Group();
 
