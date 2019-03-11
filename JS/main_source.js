@@ -5,7 +5,7 @@ document.body.appendChild( renderer.domElement );
 
 // instantiate a loader
 var loader = new THREE.OBJLoader();
-var texture = new THREE.TextureLoader().load( main_source + ".png" ); 
+var texture = new THREE.TextureLoader().load( main_source + ".jpg" );
 var main_source_mat = new THREE.MeshBasicMaterial( {map : texture} );
 var obj = new THREE.Group();
 
@@ -19,7 +19,7 @@ loader.load(
 	function ( object ) {
         // object를 훑어본다 (훑어보는 과정 중 실행할 함수 (obj 코드 한 줄))
 		object.traverse(
-            
+
             // Child(obj 코드 한 줄마다)에서 Mesh가 발견되면 Threejs의 Mesh로 변경
             function (child){
                 if (child instanceof THREE.Mesh){
@@ -30,7 +30,7 @@ loader.load(
                 }
             }
         );
-	}	
+	}
 );
 
 // 배경 설정
@@ -47,14 +47,14 @@ if (OnGrid == 1){
 // 마우스 컨트롤 추가
 var controls = new THREE.OrbitControls( camera, renderer.domElement );
 controls.autoRotate = true;
-controls.enableDamping = true; 
+controls.enableDamping = true;
 controls.screenSpacePaning = true;
 controls.minDistance = main_source_zoom_min;
 controls.maxDistance = main_source_zoom_max;
 controls.rotateSpeed = main_source_rotate_speed_mouse;
 controls.panSpeed = main_source_pan_speed;
 controls.autoRotateSpeed = main_source_rotate_speed_auto;
-controls.maxPolarAngle = Math.PI/2; 
+controls.maxPolarAngle = Math.PI/2;
 
 // 카메라 및 위치 설정
 obj.position.y = main_source_y;
