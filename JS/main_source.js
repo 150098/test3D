@@ -1,6 +1,6 @@
-var scene = new THREE.Scene(); 새로운 공간을 만든다.
+var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( main_source_fov, window.innerWidth/window.innerHeight, 0.1, 1000 );
-var renderer = new THREE.WebGLRenderer({antialias:true, alpha:true}); 렌더러 선택
+var renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
 document.body.appendChild( renderer.domElement );
 
 // instantiate a loader
